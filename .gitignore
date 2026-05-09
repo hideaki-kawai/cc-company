@@ -1,5 +1,5 @@
 .claude/
-.company/
+# .company/
 node_modules/
 docs/.vitepress/cache/
 docs/.vitepress/dist/
