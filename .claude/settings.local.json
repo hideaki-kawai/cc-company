@@ -26,7 +26,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "say -v Kyoko '作業完了！うっ うっ うっ！'"
+            "command": "say -v Kyoko '作業完了！う！ う！ う！'"
           }
         ]
       }
