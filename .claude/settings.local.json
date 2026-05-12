@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p ~/.claude/skills/gog)",
+      "Bash(curl -L -o /tmp/gog_skill.zip \"https://mcp.directory/api/skills/download/684\")",
+      "Bash(unzip -o /tmp/gog_skill.zip -d ~/.claude/skills/gog)",
+      "Bash(rm /tmp/gog_skill.zip)",
+      "Bash(git commit*)",
+      "Bash(git push*)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/hkawai/workspace/cc-company && git pull --rebase 2>/dev/null || true",
+            "statusMessage": "Syncing latest from remote..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say -v Kyoko '作業完了！うっ うっ うっ！'"
+          }
+        ]
+      }
+    ]
+  }
+}
