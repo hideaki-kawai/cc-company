@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "nocodb": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://noco.unson.jp/mcp/ncnt5zi98ggj59v1",
+        "--header",
+        "xc-mcp-token: YljnxGWRtzK2_eej03SuLDmXJ6J8RtqW"
+      ]
+    }
+  }
+}

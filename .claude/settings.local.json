@@ -6,9 +6,16 @@
       "Bash(unzip -o /tmp/gog_skill.zip -d ~/.claude/skills/gog)",
       "Bash(rm /tmp/gog_skill.zip)",
       "Bash(git commit*)",
-      "Bash(git push*)"
+      "Bash(git push*)",
+      "Bash(echo '')",
+      "Bash(echo '# NocoDB MCP')",
+      "Bash(echo 'export NOCODB_API_TOKEN=ZG7heRc3WbhAbArKcw95nhgCl0Pux_ou5sUE_vXi')",
+      "mcp__nocodb__getTablesList"
     ]
   },
+  "enabledMcpjsonServers": [
+    "nocodb"
+  ],
   "hooks": {
     "UserPromptSubmit": [
       {
