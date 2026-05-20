@@ -1,13 +1,12 @@
 {
   "mcpServers": {
     "nocodb": {
+      "command": "sh",
+      "args": ["-c", "npx mcp-remote https://noco.unson.jp/mcp/ncnt5zi98ggj59v1 --header \"xc-mcp-token: $NOCODB_MCP_TOKEN\""]
+    },
+    "chatwork": {
       "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://noco.unson.jp/mcp/ncnt5zi98ggj59v1",
-        "--header",
-        "xc-mcp-token: YljnxGWRtzK2_eej03SuLDmXJ6J8RtqW"
-      ]
+      "args": ["@chatwork/mcp-server"]
     }
   }
 }

@@ -1,0 +1,78 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__chatwork__get_me",
+      "mcp__chatwork__get_my_status",
+      "mcp__chatwork__list_rooms",
+      "mcp__chatwork__get_room",
+      "mcp__chatwork__list_room_members",
+      "mcp__chatwork__list_room_messages",
+      "mcp__chatwork__get_room_message",
+      "mcp__chatwork__post_room_message",
+      "mcp__chatwork__update_room_message",
+      "mcp__chatwork__delete_room_message",
+      "mcp__chatwork__read_room_messages",
+      "mcp__chatwork__unread_room_message",
+      "mcp__chatwork__list_room_tasks",
+      "mcp__chatwork__get_room_task",
+      "mcp__chatwork__create_room_task",
+      "mcp__chatwork__update_room_task_status",
+      "mcp__chatwork__list_room_files",
+      "mcp__chatwork__get_room_file",
+      "mcp__chatwork__get_room_link",
+      "mcp__chatwork__create_room_link",
+      "mcp__chatwork__update_room_link",
+      "mcp__chatwork__delete_room_link",
+      "mcp__chatwork__create_room",
+      "mcp__chatwork__update_room",
+      "mcp__chatwork__delete_or_leave_room",
+      "mcp__chatwork__update_room_members",
+      "mcp__chatwork__list_contacts",
+      "mcp__chatwork__list_my_tasks",
+      "mcp__chatwork__list_incoming_requests",
+      "mcp__chatwork__accept_incoming_request",
+      "mcp__chatwork__reject_incoming_request",
+      "Bash(mkdir -p ~/.claude/skills/gog)",
+      "Bash(curl -L -o /tmp/gog_skill.zip \"https://mcp.directory/api/skills/download/684\")",
+      "Bash(unzip -o /tmp/gog_skill.zip -d ~/.claude/skills/gog)",
+      "Bash(rm /tmp/gog_skill.zip)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(echo '')",
+      "Bash(echo '# NocoDB MCP')",
+      "Bash(echo 'export NOCODB_API_TOKEN=ZG7heRc3WbhAbArKcw95nhgCl0Pux_ou5sUE_vXi')",
+      "mcp__nocodb__getTablesList",
+      "mcp__ga4__get_account_summaries",
+      "mcp__ga4__run_report",
+      "Skill(anthropic-skills:xlsx)",
+      "Skill(anthropic-skills:xlsx:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "nocodb",
+    "chatwork"
+  ],
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/hkawai/workspace/cc-company && git pull --rebase 2>/dev/null || true",
+            "statusMessage": "Syncing latest from remote..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say -v Kyoko '作業完了！う！ う！ う！'"
+          }
+        ]
+      }
+    ]
+  }
+}
