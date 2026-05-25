@@ -36,6 +36,7 @@
       "Bash(curl -L -o /tmp/gog_skill.zip \"https://mcp.directory/api/skills/download/684\")",
       "Bash(unzip -o /tmp/gog_skill.zip -d ~/.claude/skills/gog)",
       "Bash(rm /tmp/gog_skill.zip)",
+      "Bash(git add *)",
       "Bash(git commit*)",
       "Bash(git push*)",
       "Bash(echo '')",
