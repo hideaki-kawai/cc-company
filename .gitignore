@@ -1,4 +1,6 @@
 .claude/worktrees/
+.claude/settings.local.json
+.claude/credentials/*.json
 # .company/
 node_modules/
 docs/.vitepress/cache/
